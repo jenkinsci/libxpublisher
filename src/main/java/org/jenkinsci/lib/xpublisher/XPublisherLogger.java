@@ -11,6 +11,10 @@ public class XPublisherLogger implements Serializable {
 
     private TaskListener listener;
 
+    public TaskListener getListener() {
+        return listener;
+    }
+
     public XPublisherLogger(TaskListener listener) {
         this.listener = listener;
     }
