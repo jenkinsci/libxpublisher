@@ -1,5 +1,7 @@
 package org.jenkinsci.lib.xpublisher;
 
+import hudson.FilePath;
+
 import java.io.Serializable;
 
 /**
@@ -9,25 +11,18 @@ public class XPublisherArtifact implements Serializable {
 
     private String origin;
 
-    private String fileName;
+    private FilePath filePath;
 
-    private String uri;
-
-    public XPublisherArtifact(String origin, String fileName, String uri) {
+    public XPublisherArtifact(String origin, FilePath filePath) {
         this.origin = origin;
-        this.fileName = fileName;
-        this.uri = uri;
+        this.filePath = filePath;
     }
 
     public String getOrigin() {
         return origin;
     }
 
-    public String getFileName() {
-        return fileName;
-    }
-
-    public String getUri() {
-        return uri;
+    public FilePath getFilePath() {
+        return filePath;
     }
 }
